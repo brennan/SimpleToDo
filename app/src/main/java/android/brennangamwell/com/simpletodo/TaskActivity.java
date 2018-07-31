@@ -36,6 +36,8 @@ public class TaskActivity extends AppCompatActivity{
     task.setText(intent.getStringExtra("text"));
     assigneesArray = new ArrayList<>();
     assigneesArray.addAll(intent.getStringArrayListExtra("assignees"));
+    assigneesArray.remove(0);
+    assigneesArray.add(0, "[Select an assignee to associate the the task...]");
 
     ArrayAdapter<String> assigneesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, assigneesArray);
     assigneesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
