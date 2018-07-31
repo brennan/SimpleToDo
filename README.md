@@ -2,8 +2,8 @@
 
 This simple to-do app lets you: 
 - Add tasks
-- Delete tasks
 - Edit tasks
+- Delete tasks
 - Add task assignees
 - Associate tasks with assignees
 - Filter tasks by assignee
@@ -21,6 +21,9 @@ To view an assignee's tasks, simply select their name in the spinner.
 
 This app persists data in the device's SQL lite database.
 
+In addition, the app automatically tracks app lifecycle events and screen views using Segment.com's
+plugin for Android.
+
 ## Areas for Improvement
 
 - Validating queries and error handling: In most cases, errors thrown when accessing the database
@@ -32,13 +35,13 @@ pulling new data by clearing the view and re-querying.
 
 - Ability to disassociate users from tasks.
 
-- Ability to reset the main screen to view all tasks after filtering by a single assignee's name.
-
 - The UI - it leaves much to be desired. :)
 
 - DRY up the code - many of the methods are repeated in the app's MainActivity and 
-TaskActivity - this could could be shared across the activities utilizing fragments or otherwise.
+TaskActivity - this could could be shared across the activities utilizing fragments or otherwise. I
+could also include shared methods in a class and declare these methods static.
 
-- String values, colors, etc., should go in the `values` folder for straightforward localization.
+- String values, colors, etc., should go in the `values` folder for consistency and 
+straightforward localization.
 
 - Unit tests.
