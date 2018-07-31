@@ -27,6 +27,9 @@ This app persists data in the device's SQL lite database.
 don't interrupt code execution, which could cause the app to crash. In future iterations, error 
 checking and handling will be added in all cases.
 
+- Making db queries more efficient: Instead making sure the view is in sync with the db without
+pulling new data by clearing the view and re-querying.
+
 - Ability to disassociate users from tasks.
 
 - Ability to reset the main screen to view all tasks after filtering by a single assignee's name.
@@ -35,3 +38,7 @@ checking and handling will be added in all cases.
 
 - DRY up the code - many of the methods are repeated in the app's MainActivity and 
 TaskActivity - this could could be shared across the activities utilizing fragments or otherwise.
+
+- String values, colors, etc., should go in the `values` folder for straightforward localization.
+
+- Unit tests.
