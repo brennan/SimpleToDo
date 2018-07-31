@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -106,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
     updated = addTask(taskText);
     if (updated > 0) {
       tasksArray.add(taskText);
+      Log.i("message", tasksArray.toString());
       taskIdArray.add(updated);
       tasksAdapter.notifyDataSetChanged();
       etNewItem.setText("");

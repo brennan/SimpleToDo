@@ -49,15 +49,20 @@
         android:text="Reset filters"
         android:onClick="resetFilters" />
 
-    <Button
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:padding="10sp"
+        android:gravity="center_horizontal"
+        android:background="@color/colorAccent"
         android:text="Task List" />
 
     <ListView
         android:id="@+id/lvItems"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="1000sp" />
 
   </LinearLayout>
+
 </ScrollView>
